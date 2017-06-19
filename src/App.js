@@ -10,20 +10,20 @@ const component1 = React.createClass({
   render: function() {
     return (
       div(null,
-        h1(null, 'something is here'))
+        h1(null, this.props.desc))
     )
   }
 });
+
+const factory1 = React.createFactory(component1);
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        
-
-        { React.createElement(component1, null) }
-        { React.createElement(component1, null) }
-        { React.createElement(component1, null) }
+        { factory1({desc: 'first sentence'}) }
+        { factory1({desc: 'second sentence'}) }
+        { factory1({desc: 'third sentence'}) }
       </div>
     );
   }
