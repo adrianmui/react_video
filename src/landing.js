@@ -5,7 +5,7 @@ import Sample2 from './components/sample2/sample2';
 
 const factory1 = React.createFactory(sample);
 
-const landing = props => {
+const Landing = props => {
   return (
     <div>
       { factory1({desc: 'first sentence', color: 'red'}) }
@@ -16,4 +16,4 @@ const landing = props => {
   )
 };
 
-export default landing;
+export default Landing;
