@@ -29,7 +29,7 @@ const ShowCards = props => {
     <div style={showCardStyle}>
       <img src={image} style={imageStyle} alt=''/>
       <div style={textStyle}>
-        <h3><Link to={`/search/${imdbID}`}>{title}</Link>:{imdbID} </h3>
+        <h3><Link to={`/details/${imdbID}`}>{title}</Link>:{imdbID} </h3>
         <h4>{year}</h4>
         <p>{description}</p>
       </div>

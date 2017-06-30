@@ -15,7 +15,7 @@ class App extends Component {
         <div className='App'>
           <Route exact path='/' component={Landing} />
           <Route path='/search' component={Search} />
-          <Route path='/search/:id' component={
+          <Route path='/details/:id' component={
             props => {      
               const selectedShow = jsonData.shows.find(show => props.match.params.id === show.imdbID)
               return (
