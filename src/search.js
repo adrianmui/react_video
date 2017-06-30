@@ -13,7 +13,7 @@ class Search extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      searchTerm: `debug dis`
+      searchTerm: ``
     }
 
     this.handleSearchTermChange = this.handleSearchTermChange.bind(this)

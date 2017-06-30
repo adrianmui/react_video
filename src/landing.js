@@ -4,11 +4,9 @@ import { Link } from 'react-router-dom';
 
 // import sample from './shared/sample/sample';
 import Sample2 from './shared/sample2/sample2';
-
-import Search from './search';
+import Search from './Search';
 
 // const factory1 = React.createFactory(sample);
-
 const Landing = props => {
   return (
     <div>

@@ -3,8 +3,8 @@ import './App.css'
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Landing from './landing';
-import Search from './search';
+import Landing from './Landing';
+import Search from './Search';
 
 class App extends Component {
   render () {
