@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-import sample from './shared/sample/sample';
+// import sample from './shared/sample/sample';
 import Sample2 from './shared/sample2/sample2';
 
 import Search from './search';

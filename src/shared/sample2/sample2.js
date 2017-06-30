@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
+import React from 'react'
 
 const Sample2 = props => {
-  const style = { color: props.color };
+  const style = { color: props.color }
 
   return (
     <div>
@@ -11,6 +10,6 @@ const Sample2 = props => {
       </h1>
     </div>
   )
-};
+}
 
-export default Sample2;
+export default Sample2

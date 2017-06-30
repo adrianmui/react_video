@@ -1,24 +1,42 @@
-import React, { Component } from 'react';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const ShowCards = props => {
   // const style = { color: props.color }
-  const { title, year, description } = props.show
+  const { title, year, description, poster } = props.show
+
+  const image = require(`./../img/posters/${poster}`)
 
   const showCardStyle = {
+    display: 'inline-table',
     border: '1px solid black',
-    width: '45%',
-    margin: '0 3% 1% 0'
+    width: '48%',
+    height: '200px',
+  }
+
+  const imageStyle = {
+    width: '20%',
+    float: 'left'
+  }
+
+  const textStyle = {
+    position: 'relative'
   }
 
   return (
     <div style={showCardStyle}>
-      <div>
+      <img src={image} style={imageStyle} alt=''/>
+      <div style={textStyle}>
         <h3>{title} </h3>
         <h4>{year}</h4>
         <p>{description}</p>
       </div>
     </div>
   )
+}
+
+ShowCards.PropTypes = {
+  show: PropTypes.object
 }
 
 export default ShowCards
