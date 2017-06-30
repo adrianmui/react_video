@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { Link } from 'react-router-dom'
+
 const ShowCards = props => {
   // const style = { color: props.color }
-  const { title, year, description, poster } = props.show
+  const { title, year, description, poster, imdbID } = props.show
 
   const image = require(`./../img/posters/${poster}`)
 
@@ -27,7 +29,7 @@ const ShowCards = props => {
     <div style={showCardStyle}>
       <img src={image} style={imageStyle} alt=''/>
       <div style={textStyle}>
-        <h3>{title} </h3>
+        <h3><Link to={`/search/${imdbID}`}>{title}</Link>:{imdbID} </h3>
         <h4>{year}</h4>
         <p>{description}</p>
       </div>
