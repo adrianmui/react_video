@@ -1,11 +1,26 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+
+import ShowCards from './showCards/showCards'
+
+import staticData from './data.json'
+
+const jsonStyle = {
+  textAlign: 'left'
+}
 
 const Search = () => {
   return (
-    <div>
+    <div style={ jsonStyle }>
       <Link to='/'>Home</Link>
-      <h1> Searching!! </h1>
+      <ul>
+          {
+            staticData.shows.map( show => (
+                <ShowCards show={show}/>
+              )
+            )
+          }
+      </ul>
     </div>
   )
 }
